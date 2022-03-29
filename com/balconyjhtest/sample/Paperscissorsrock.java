@@ -1,3 +1,5 @@
+package com.balconyjhtest.sample;
+
 import java.util.Random;
 import java.util.Scanner;
 

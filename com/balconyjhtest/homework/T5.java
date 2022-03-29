@@ -1,4 +1,4 @@
-package com.itranswarp.sample;
+package com.balconyjhtest.homework;
 
 import java.util.Scanner;
 
