@@ -3,7 +3,7 @@ package com.balconyjhtest.homework;
 public class AnyArea {
     public static void main(String[] args) {
         new getArea(5);
-        new getArea(2, 3);
+        new getArea(4, 3);
         new getArea(2, 3, 4);
     }
 }
