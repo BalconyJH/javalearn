@@ -23,6 +23,7 @@ public class AiService {
         } else {
             Other.voice();
         }
+        scanner.close();
     }
 }
 

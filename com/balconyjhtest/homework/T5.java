@@ -23,6 +23,7 @@ public class T5 {
             } else {
                 System.out.println("猜小了！");
             }
+            scanner.close();
         }
     }
 }

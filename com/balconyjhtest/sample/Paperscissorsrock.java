@@ -25,5 +25,6 @@ public class Paperscissorsrock {
             case 0 -> System.out.println("平局");
             default -> System.out.println("输入错误");
         }
+        scanner.close();
     }
 }

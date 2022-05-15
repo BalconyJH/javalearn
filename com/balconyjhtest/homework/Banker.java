@@ -265,5 +265,6 @@ public class Banker {
                 default -> System.out.println("请正确选择！");
             }
         } while (!choice.equals(""));
+        sc.close();
     }
 }
