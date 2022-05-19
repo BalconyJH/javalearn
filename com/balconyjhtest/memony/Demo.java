@@ -91,5 +91,6 @@ public class Demo {
                 }
             }
         }
+        sc.close();
     }
 }
