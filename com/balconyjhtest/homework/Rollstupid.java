@@ -1,32 +1,50 @@
 package com.balconyjhtest.homework;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class Rollstupid {
-    public static void main(String[] args) {
-        // 从编号为0-50的学生中随机产生一等奖1名，二等奖2名，三等奖3名，不重复，抽奖顺序为三等奖，二等奖，一等奖
-        ArrayList<String> all = new ArrayList<String>();
-        ArrayList<String> third = new ArrayList<String>();
-        ArrayList<String> second = new ArrayList<String>();
-        ArrayList<String> first = new ArrayList<String>();
-        String string;
 
-        for (int i = 0; i < 50; i++) {
-            if (i < 10) {
-                string = "00" + (int)(i);
-            } else {
-                string = "0" + (int)(i);
-            }
-            all.add(string);
+    private static final int THIRD_NUM = 3;
+    private static final int SECOND_NUM = 2;
+    private static final int FIRST_NUM = 1;
+
+    public static void main(String[] args) {
+        List<Integer> person = new ArrayList<>();
+        List<String> third = new ArrayList<>();
+        List<String> second = new ArrayList<>();
+        List<String> first = new ArrayList<>();
+
+        myLotteryDraw(person, third, THIRD_NUM);
+        myLotteryDraw(person, second, SECOND_NUM);
+        myLotteryDraw(person, first, FIRST_NUM);
+
+        System.out.println("三等奖: ");
+        myPrint(third);
+        System.out.println();
+
+        System.out.println("二等奖: ");
+        myPrint(second);
+        System.out.println();
+
+        System.out.println("一等奖: ");
+        myPrint(first);
+        System.out.println();
+    }
+
+    private static void myPrint(List<String> stringList) {
+        for (var str : stringList) {
+            System.out.print(str + "\t");
         }
-        String students;
-        for(int i = 1; i <= 3; i++) {
-            for(int j = 0; j < i; j++) {
-                int test = (int)all.get((int)(Math.random() * 50));
-                if
-            }
+    }
+
+    private static void myLotteryDraw(List<Integer> person, List<String> stringList, int nums) {
+        while (stringList.size() < nums) {
+            int id = (int) (Math.ceil(Math.random() * 50));
+            if (person.contains(id)) continue;
+            person.add(id);
+            stringList.add(Integer.toString(id));
         }
-        
     }
 }
-

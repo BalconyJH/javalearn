@@ -16,20 +16,20 @@
 
 package com.balconyjhtest.homework;
 
-class Animal {
+class animal {
     public void voice() {
         System.out.println("default voice");
     }
 }
 
 
-class Dog extends Animal {
+class Dog extends animal {
     public void voice() {
         System.out.println("汪汪");
     }
 }
 
-class Cat extends Animal {
+class Cat extends animal {
     public void voice() {
         System.out.println("喵喵");
     }
